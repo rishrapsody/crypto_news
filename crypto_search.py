@@ -1,5 +1,5 @@
 #! /usr/bin/python
-from pprint import pprint
+
 from googlesearch import search
 import telegram_send
 import yaml
