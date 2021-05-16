@@ -6,7 +6,9 @@ import yaml
 import os
 import os.path
 
+## "Query used to search on Google"
 query = 'latest news on bitcoin, ethereum and dogecoin cryptocurrency this week'
+
 global nlist #this list will be pushed as telegram message to end user
 global glist #this list will be used to keep track of all weblinks locally
 nlist = [ ]
@@ -67,6 +69,12 @@ result = yaml.dump(nlist)
 
 ## "Pushing yaml file as message to end User via Telegram_send api." 
 ## "An initial connection setup is required between server running this script and end user Telegram Bot using HTTP API token and passkey"
-telegram_send.send(messages=[result])	
+## 'If no new weblink is found in current iteration, a text message will be sent notifying the same"
+if not nlist:
+	telegram_send.send(messages=["Can't fetch any new links for your query on googlesearch. I will get back to you in another 4 hrs........"])
+else:
+	telegram_send.send(messages=[result])	
+
+
 	
 	
