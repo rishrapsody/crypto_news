@@ -11,3 +11,6 @@ Purpose:
 
 
 PS : This script can be used to keep regular track of any news/google search
+
+(https://user-images.githubusercontent.com/37843190/118384155-79e29300-b621-11eb-9870-a469a12affc6.png)
+
